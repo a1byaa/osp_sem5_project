@@ -24,10 +24,12 @@
     $c1 = isset($_POST['chbx1']) ? $_POST['chbx1'] : "";
     $c2 = isset($_POST['chbx2']) ? $_POST['chbx2'] : "";
     $c3 = isset($_POST['chbx3']) ? $_POST['chbx3'] : "";
+    $c4 = isset($_POST['chbx4']) ? $_POST['chbx4'] : "";
+
    
 
            
-                $sqlin = "INSERT INTO  regcourse ( regID,c1,c2,c3) VALUES ('$registerNumber','$c1','$c2','$c3')";
+                $sqlin = "INSERT INTO  regcourse ( regID,c1,c2,c3,c4) VALUES ('$registerNumber','$c1','$c2','$c3','$c4')";
                 // Proceed to use $variable
            
             if (mysqli_query($conn, $sqlin)) 
@@ -199,6 +201,7 @@
                 <a href="profile.php">Profile</a>
             </div>
             <div class="navbar-right">
+
                 <a href="session.php" onclick="return confirmLogout();">Logout</a>
             </div>            
         </nav>
@@ -221,28 +224,36 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Data 1</td>
-                            <td>Data 2</td>
-                            <td>Data 3</td>
-                            <td>Data 4</td>
-                            <td>Data 5</td>
+                            <td>Web Development</td>
+                            <td>CSC2003</td>
+                            <td>4</td>
+                            <td>A1+TA1</td>
+                            <td>Dr.satya</td>
                             <td><input type="checkbox" value="CSC2003" name="chbx1"></td>
                         </tr>
                         <tr>
-                            <td>Data 14</td>
-                            <td>Data 2</td>
-                            <td>Data 3</td>
-                            <td>Data 4</td>
-                            <td>Data 5</td>
+                            <td>OSP</td>
+                            <td>CSC2303</td>
+                            <td>2</td>
+                            <td>B2</td>
+                            <td>Dr.Sumangali</td>
                             <td><input type="checkbox" value="CSC2303" name="chbx2"></td>
                         </tr>
                         <tr>
-                            <td>Data 14</td>
-                            <td>Data 2</td>
-                            <td>Data 3</td>
-                            <td>Data 4</td>
-                            <td>Data 5</td>
+                            <td>DBMS</td>
+                            <td>CSC3303</td>
+                            <td>4</td>
+                            <td>D1+TD1</td>
+                            <td>Dr.Subhash</td>
                             <td><input type="checkbox" value="CSC3303" name="chbx3"></td>
+                        </tr>
+                        <tr>
+                            <td>System Design</td>
+                            <td>CSC4001</td>
+                            <td>3</td>
+                            <td>D2+TD2</td>
+                            <td>Dr.prabhas</td>
+                            <td><input type="checkbox" value="CSC4001" name="chbx3"></td>
                         </tr>
                     </tbody>
                 </table>
